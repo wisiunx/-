@@ -1,3 +1,36 @@
+# Виртуальное окружение
+venv/
+env/
+ENV/
+
+# Файлы Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Файлы IDE
 .vscode/
+.idea/
+*.swp
+*.swo
+
+# Файлы окружения
+.env
+.env.local
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.bak
+
+# Файлы базы данных
+*.db
+*.sqlite
+
+# Файлы операционной системы
+.DS_Store
+Thumbs.db
