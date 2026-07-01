@@ -1,0 +1,22 @@
+[0;1;32m●[0m postgresql.service - PostgreSQL database server
+     Loaded: loaded (]8;;file://DESKTOP-AJ727MP/usr/lib/systemd/system/postgresql.service\/usr/lib/systemd/system/postgresql.service]8;;\; [0;1;38:5:185mdisabled[0m; preset: [0;1;38:5:185mdisabled[0m)
+     Active: [0;1;32mactive (running)[0m since Tue 2026-06-16 15:16:05 MSK; 13s ago
+ Invocation: 51b81111ae494133902ad1c67c2c3bef
+    Process: 911 ExecStartPre=/usr/libexec/postgresql-check-db-dir postgresql (code=exited, status=0/SUCCESS)
+   Main PID: 914 (postgres)
+      Tasks: 7[0;38;5;245m (limit: 26213)[0m
+     Memory: 27.6M (peak: 28.4M)
+        CPU: 44ms
+     CGroup: /system.slice/postgresql.service
+             ├─[0;38;5;245m914 /usr/bin/postgres -D /var/lib/pgsql/data[0m
+             ├─[0;38;5;245m915 "postgres: logger "[0m
+             ├─[0;38;5;245m916 "postgres: checkpointer "[0m
+             ├─[0;38;5;245m917 "postgres: background writer "[0m
+             ├─[0;38;5;245m919 "postgres: walwriter "[0m
+             ├─[0;38;5;245m920 "postgres: autovacuum launcher "[0m
+             └─[0;38;5;245m921 "postgres: logical replication launcher "[0m
+
+Jun 16 15:16:05 DESKTOP-AJ727MP systemd[1]: Starting postgresql.service - PostgreSQL database server...
+Jun 16 15:16:05 DESKTOP-AJ727MP postgres[914]: 2026-06-16 15:16:05.387 MSK [914] LOG:  redirecting log output to logging collector process
+Jun 16 15:16:05 DESKTOP-AJ727MP postgres[914]: 2026-06-16 15:16:05.387 MSK [914] HINT:  Future log output will appear in directory "log".
+Jun 16 15:16:05 DESKTOP-AJ727MP systemd[1]: Started postgresql.service - PostgreSQL database server.

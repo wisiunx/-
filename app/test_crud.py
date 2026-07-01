@@ -12,30 +12,25 @@ def test_crud():
     
     try:
         print("=== ТЕСТИРОВАНИЕ CRUD ОПЕРАЦИЙ ===\n")
-        
-        # 1. CREATE
+
         print("1. CREATE - создание категории")
         new_cat = crud.create_category(db, "Тестовая категория")
         print(f"   Создана категория: id={new_cat.id}, title={new_cat.title}")
-        
-        # 2. READ
+
         print("\n2. READ - чтение категории")
         found_cat = crud.get_category(db, new_cat.id)
         print(f"   Найдена категория: {found_cat.title}")
-        
-        # 3. UPDATE
+    
         print("\n3. UPDATE - обновление категории")
         updated_cat = crud.update_category(db, new_cat.id, "Обновленная категория")
         print(f"   Обновлено название: {updated_cat.title}")
-        
-        # 4. DELETE
+
         print("\n4. DELETE - удаление категории")
         crud.delete_category(db, new_cat.id)
         check_cat = crud.get_category(db, new_cat.id)
         if check_cat is None:
-            print("   ✅ Категория успешно удалена")
-        
-        # 5. CRUD для книг
+            print("    Категория успешно удалена")
+
         print("\n=== ТЕСТИРОВАНИЕ CRUD ДЛЯ КНИГ ===")
         
         test_cat = crud.create_category(db, "Категория для теста книг")

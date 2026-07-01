@@ -12,10 +12,9 @@ def init_db():
     db = SessionLocal()
     
     try:
-        # Создаём таблицы
+
         models.Base.metadata.create_all(bind=db.get_bind())
-        
-        # Добавляем категории
+
         categories = [
             "Художественная литература",
             "Научно-популярные книги",
@@ -27,13 +26,11 @@ def init_db():
             if not existing:
                 crud.create_category(db, cat_title)
                 print(f"Добавлена категория: {cat_title}")
-        
-        # Получаем ID категорий
+
         cat_lit = crud.get_category_by_title(db, "Художественная литература")
         cat_sci = crud.get_category_by_title(db, "Научно-популярные книги")
         cat_prog = crud.get_category_by_title(db, "Программирование")
-        
-        # Добавляем книги
+
         books = [
             (cat_lit.id, "Мастер и Маргарита", "Роман Михаила Булгакова", 450),
             (cat_lit.id, "Преступление и наказание", "Роман Фёдора Достоевского", 380),
